@@ -4,16 +4,16 @@
  * and checks if word can be made from letters. returns true or false.
 */
 function canConstructWord(word, letters) {
-    if (word === '') {
-        return true;
+    if (letters.length === 0) {
+        return false;
     }
     const wordObj = getFreqCounter(word);
     const lettersObj = getFreqCounter(letters);
 
-    
+
     for (let letter in wordObj) {
             const key = letter;
-          
+
             if (!key in lettersObj) {
                 return false;
             }
