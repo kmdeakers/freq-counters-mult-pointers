@@ -12,18 +12,18 @@ function canConstructWord(word, letters) {
 
 
     for (let letter in wordObj) {
-            const key = letter;
+        const key = letter;
 
-            if (!key in lettersObj) {
-                return false;
-            }
-            if (wordObj[letter] > lettersObj[letter]){
-                return false;
-            }
+        if (!(key in lettersObj)) {
+            return false;
+        }
+        if (wordObj[letter] > lettersObj[letter]){
+            return false;
+        }
     }
     return true;
 }
-
+//add s to freq
 /** create frequency counter that accepts string and returns object with frequency of letters*/
 function getFreqCounter (items) {
     const freq = {};

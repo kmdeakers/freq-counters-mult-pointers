@@ -14,7 +14,7 @@ function averagePair(nums, targetAvg) {
   const right = nums.length -1;
 
   while(left < right){
-
+//adjust sum to avg
     const sum = nums[left] + nums[right];
 
     if(sum === target){
